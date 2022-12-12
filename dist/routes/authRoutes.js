@@ -1,10 +1,10 @@
 import { Router } from "express";
 import * as authController from "../controllers/authController.js";
-export const router = Router();
-router.route('/signup')
+export const authRouter = Router();
+authRouter.route('/signup')
     .get(authController.getSignup)
     .post(authController.postSignup);
-router.route('/login')
+authRouter.route('/login')
     .get(authController.getLogin)
     .post(authController.postLogin);
 //# sourceMappingURL=authRoutes.js.map

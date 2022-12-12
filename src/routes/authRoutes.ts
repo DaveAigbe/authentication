@@ -2,13 +2,13 @@ import {Router} from "express"
 import * as authController from "../controllers/authController.js";
 
 
-export const router = Router()
+export const authRouter: Router = Router()
 
-router.route('/signup')
+authRouter.route('/signup')
     .get(authController.getSignup)
     .post(authController.postSignup)
 
-router.route('/login')
+authRouter.route('/login')
     .get(authController.getLogin)
     .post(authController.postLogin)
 

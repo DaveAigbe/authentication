@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
-import { router } from './routes/authRoutes.js';
+import { authRouter } from './routes/authRoutes.js';
+import { mainPageRouter } from "./routes/mainPageRoutes.js";
 const app = express();
 // middleware
 app.use(express.static('public'));
@@ -24,10 +25,9 @@ const connect = () => {
     }
 };
 connect();
-app.use(router);
 // routes
-app.get('/', (req, res) => res.render('home'));
-app.get('/smoothies', (req, res) => res.render('smoothies'));
+app.use(authRouter);
+app.use(mainPageRouter);
 app.listen(3000, () => {
     console.log('App is now listening on port 3000');
     console.log(dbURI);
