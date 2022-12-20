@@ -98,3 +98,21 @@ L
 tsconfig.json,6\1\61ebb9fd6e8cf9082658121d5d81e297791dacd0
 B
 src/types/IUser.ts,a\0\a0dbd2fca1c3cc0e1adb146e207723270a24953e
+H
+src/routes/authRoutes.ts,a\f\af36d3de1c94eb721f96369a52810507e41cea0f
+G
+dist/models/User.js.map,f\9\f9a5a18b3e979b66ddca1e1d2906640e42b5704e
+I
+views/partials/header.ejs,a\6\a6563f0102bbd243ffc487f3f3013a1652bf3ac5
+?
+views/login.ejs,3\f\3f748e7b3e38d474ff6964f6a6d3381932b1eac9
+@
+views/signup.ejs,f\b\fbc9cc99a27e840a54a071b85665c235786d8f70
+C
+dist/models/User.js,1\e\1e5a7d308a941cd6a9d5a4e5a569b99c2097253b
+>
+views/home.ejs,0\c\0c0963ebc7f1e502b8d91b4f9bd9d82b7b16e719
+V
+&dist/controllers/authController.js.map,e\2\e277cd133b81656a0d3082a4f338808cff5c7a36
+R
+"dist/controllers/authController.js,a\4\a4f399025f86dca7f00bdbe470af96e54f0ec9b3

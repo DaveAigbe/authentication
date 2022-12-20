@@ -3,16 +3,18 @@ import mongoose from "mongoose";
 import { authRouter } from './routes/authRoutes.js';
 import { mainPageRouter } from "./routes/mainPageRoutes.js";
 import cookieParser from 'cookie-parser';
+import * as dotenv from 'dotenv';
 const app = express();
 // middleware
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+dotenv.config();
 // view engine
 app.set('view engine', 'ejs');
 // database connection
-const dbURI = 'mongodb+srv://admin:admin@cluster0.6jzjmof.mongodb.net/?retryWrites=true&w=majority';
+const dbURI = process.env.DB_URI;
 mongoose.set('strictQuery', true);
 const connect = () => {
     if (dbURI) {
@@ -33,6 +35,5 @@ app.use(authRouter);
 app.use(mainPageRouter);
 app.listen(3000, () => {
     console.log('App is now listening on port 3000');
-    console.log(dbURI);
 });
 //# sourceMappingURL=app.js.map
