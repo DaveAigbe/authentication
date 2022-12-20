@@ -42,7 +42,7 @@ export const postSignup = async (req, res) => {
 export const postLogin = async (req, res) => {
     const { email, password } = req.body;
     try {
-        const user = await userDB.find({ email: email, password: password });
+        const user = userDB.find({ email: email, password: password });
         if (user) {
             res.json(user);
         }

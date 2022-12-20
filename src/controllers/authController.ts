@@ -55,7 +55,7 @@ export const postLogin: RouteCallbackT = async (req: Request, res: Response) => 
     const {email, password} = req.body
 
     try {
-        const user = await userDB.find({email: email, password: password})
+        const user = userDB.find({email: email, password: password})
 
         if (user) {
             res.json(user)
