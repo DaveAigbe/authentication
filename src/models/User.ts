@@ -1,19 +1,29 @@
 import mongoose, {Schema} from "mongoose";
+import * as bcrypt from 'bcrypt'
+import {IUser} from "../types/IUser.js";
 
 
 const userSchema = new Schema({
     email: {
         type: String,
-        required: true,
+        required: [true, 'Please enter an email'],
         unique: true,
-        lowercase: true
+        lowercase: true,
     },
     password: {
         type: String,
-        required: true,
-        minLength: 8
+        required: [true, 'Please enter an password'],
+        minlength: [8, 'Minimum password length is 8 characters']
     }
 })
+
+userSchema.pre('save',  async function (this: IUser ,next: any) {
+    const salt = await bcrypt.genSalt()
+    this.password = await bcrypt.hash(this.password, salt)
+
+    next()
+} )
+
 
 
 export const User = mongoose.model('users', userSchema)

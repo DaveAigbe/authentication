@@ -5,6 +5,10 @@ import {IUser} from "../types/IUser.js";
 
 const userDB = User
 
+const handleErrors = (err: Error) => {
+    console.log(err.message)
+}
+
 // Display signup form
 export const getSignup: RouteCallbackT = (req: Request, res: Response) => {
     res.render('signup')
@@ -29,6 +33,7 @@ export const postSignup: RouteCallbackT = async (req: Request, res: Response) =>
         res.status(200).json(user)
     } catch (err) {
         if (err instanceof Error) {
+            handleErrors(err)
             res.status(400).json({err: err.message})
         }
     }
@@ -47,6 +52,7 @@ export const postLogin: RouteCallbackT = async (req: Request, res: Response) => 
 
     } catch (err) {
         if (err instanceof Error) {
+            handleErrors(err)
             res.status(400).json({err: err.message})
         }
     }

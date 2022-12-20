@@ -1,5 +1,8 @@
 import { User } from "../models/User.js";
 const userDB = User;
+const handleErrors = (err) => {
+    console.log(err.message);
+};
 // Display signup form
 export const getSignup = (req, res) => {
     res.render('signup');
@@ -21,6 +24,7 @@ export const postSignup = async (req, res) => {
     }
     catch (err) {
         if (err instanceof Error) {
+            handleErrors(err);
             res.status(400).json({ err: err.message });
         }
     }
@@ -36,6 +40,7 @@ export const postLogin = async (req, res) => {
     }
     catch (err) {
         if (err instanceof Error) {
+            handleErrors(err);
             res.status(400).json({ err: err.message });
         }
     }
