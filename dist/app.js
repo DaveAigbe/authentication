@@ -12,7 +12,7 @@ app.use(cookieParser());
 // view engine
 app.set('view engine', 'ejs');
 // database connection
-const dbURI = '';
+const dbURI = 'mongodb+srv://admin:admin@cluster0.6jzjmof.mongodb.net/?retryWrites=true&w=majority';
 mongoose.set('strictQuery', true);
 const connect = () => {
     if (dbURI) {

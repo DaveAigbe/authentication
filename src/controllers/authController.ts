@@ -2,11 +2,19 @@ import {Request, Response} from "express";
 import {RouteCallbackT} from "../types/RouteCallbackT.js";
 import {User} from "../models/User.js";
 import {IUser} from "../types/IUser.js";
+import jwt from 'jsonwebtoken'
 
 const userDB = User
 
 const handleErrors = (err: Error) => {
     console.log(err.message)
+}
+
+const maxAge = 3 * 24 * 60 * 60
+const createToken = (id: any) => {
+    return jwt.sign({id}, 'i enjoy overwatch 2', {
+        expiresIn: maxAge
+    })
 }
 
 // Display signup form
@@ -30,7 +38,10 @@ export const postSignup: RouteCallbackT = async (req: Request, res: Response) =>
         }
 
         const user = await userDB.create(newUser)
-        res.status(200).json(user)
+
+        const token = createToken(user._id)
+        res.cookie('jwt', token, {httpOnly: true, maxAge: maxAge * 1000})
+        res.status(201).json({user: user._id})
     } catch (err) {
         if (err instanceof Error) {
             handleErrors(err)
