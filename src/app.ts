@@ -23,7 +23,7 @@ mongoose.set('strictQuery', true)
 const connect = () => {
     if (dbURI) {
         mongoose
-            .connect(dbURI)
+            .connect(dbURI, {dbName: 'node-auth'})
             .then(() => {
                 return console.log(`Successfully connected database.`);
             })

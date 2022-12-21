@@ -7,7 +7,7 @@ const userSchema = new Schema({
         unique: true,
         lowercase: true,
     },
-    password: {
+    hashedPassword: {
         type: String,
         required: [true, 'Please enter an password'],
         minlength: [8, 'Minimum password length is 8 characters']
@@ -15,8 +15,19 @@ const userSchema = new Schema({
 });
 userSchema.pre('save', async function (next) {
     const salt = await bcrypt.genSalt();
-    this.password = await bcrypt.hash(this.password, salt);
+    this.hashedPassword = await bcrypt.hash(this.hashedPassword, salt);
     next();
 });
+userSchema.statics.login = async function (email, password) {
+    const user = await this.findOne({ email });
+    if (user) {
+        const authorized = await bcrypt.compare(password, user.hashedPassword);
+        if (authorized) {
+            return user;
+        }
+        throw Error('Incorrect Password');
+    }
+    throw Error('Incorrect Email');
+};
 export const User = mongoose.model('users', userSchema);
 //# sourceMappingURL=User.js.map

@@ -1,9 +1,9 @@
-import { User } from "../models/User.js";
+import { User as userDB } from "../models/User.js";
 import jwt from 'jsonwebtoken';
-const userDB = User;
 const handleErrors = (err) => {
     console.log(err.message);
 };
+// Equal to 1 day
 const maxAge = 3 * 24 * 60 * 60;
 const createToken = (id) => {
     return jwt.sign({ id }, 'i enjoy overwatch 2', {
@@ -24,12 +24,12 @@ export const postSignup = async (req, res) => {
     try {
         const newUser = {
             email: email,
-            password: password
+            hashedPassword: password
         };
         const user = await userDB.create(newUser);
         const token = createToken(user._id);
         res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });
-        res.status(201).json({ user: user._id });
+        res.redirect('/');
     }
     catch (err) {
         if (err instanceof Error) {
@@ -42,10 +42,10 @@ export const postSignup = async (req, res) => {
 export const postLogin = async (req, res) => {
     const { email, password } = req.body;
     try {
-        const user = userDB.find({ email: email, password: password });
-        if (user) {
-            res.json(user);
-        }
+        const user = await userDB.login(email, password);
+        const token = createToken(user._id);
+        res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });
+        res.redirect('/');
     }
     catch (err) {
         if (err instanceof Error) {
