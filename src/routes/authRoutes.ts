@@ -12,6 +12,9 @@ authRouter.route('/login')
     .get(authController.getLogin)
     .post(authController.postLogin)
 
+authRouter.route('/logout')
+    .get(authController.getLogout)
+
 
 
 

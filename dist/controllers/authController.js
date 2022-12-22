@@ -18,6 +18,11 @@ export const getSignup = (req, res) => {
 export const getLogin = (req, res) => {
     res.render('login');
 };
+// Logout User
+export const getLogout = (req, res) => {
+    res.clearCookie('jwt');
+    res.redirect('/login');
+};
 // Pull information from signup form and create new user in DB
 export const postSignup = async (req, res) => {
     const { email, password } = req.body;

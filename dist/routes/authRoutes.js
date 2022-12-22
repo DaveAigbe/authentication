@@ -7,4 +7,6 @@ authRouter.route('/signup')
 authRouter.route('/login')
     .get(authController.getLogin)
     .post(authController.postLogin);
+authRouter.route('/logout')
+    .get(authController.getLogout);
 //# sourceMappingURL=authRoutes.js.map

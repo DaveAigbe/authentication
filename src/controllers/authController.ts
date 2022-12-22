@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import {RouteCallbackT} from "../types/RouteCallbackT.js";
+import {RouteCallback} from "../types/RouteCallback.js";
 import {User as userDB} from "../models/User.js";
 import {IUser} from "../types/IUser.js";
 import jwt from 'jsonwebtoken'
@@ -19,17 +19,23 @@ const createToken = (id: any) => {
 }
 
 // Display signup form
-export const getSignup: RouteCallbackT = (req: Request, res: Response) => {
+export const getSignup: RouteCallback = (req: Request, res: Response) => {
     res.render('signup')
 }
 
 // Display login form
-export const getLogin: RouteCallbackT = (req: Request, res: Response) => {
+export const getLogin: RouteCallback = (req: Request, res: Response) => {
     res.render('login')
 }
 
+// Logout User
+export const getLogout: RouteCallback = (req: Request, res: Response) => {
+    res.clearCookie('jwt')
+    res.redirect('/login')
+}
+
 // Pull information from signup form and create new user in DB
-export const postSignup: RouteCallbackT = async (req: Request, res: Response) => {
+export const postSignup: RouteCallback = async (req: Request, res: Response) => {
     const {email, password} = req.body
 
     try {
@@ -53,7 +59,7 @@ export const postSignup: RouteCallbackT = async (req: Request, res: Response) =>
 }
 
 // Pull information from post form and authenticate user
-export const postLogin: RouteCallbackT = async (req: Request, res: Response) => {
+export const postLogin: RouteCallback = async (req: Request, res: Response) => {
     const {email, password} = req.body
 
     try {

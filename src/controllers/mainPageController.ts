@@ -1,9 +1,9 @@
-import {RouteCallbackT} from "../types/RouteCallbackT.js";
+import {RouteCallback} from "../types/RouteCallback.js";
 
-export const getHomePage: RouteCallbackT = (req, res) => {
+export const getHomePage: RouteCallback = (req, res) => {
     res.render('home')
 }
 
-export const getSmoothiesPage: RouteCallbackT = (req, res) => {
+export const getSmoothiesPage: RouteCallback = (req, res) => {
     res.render('smoothies')
 }
