@@ -4,6 +4,7 @@ import {authRouter} from './routes/authRoutes.js'
 import {mainPageRouter} from "./routes/mainPageRoutes.js";
 import cookieParser from 'cookie-parser';
 import  * as dotenv from 'dotenv'
+import {checkUser} from "./middleware/authMiddleware.js";
 
 const app = express();
 
@@ -36,6 +37,7 @@ const connect = () => {
 connect();
 
 // routes
+app.get('*', checkUser)
 app.use(authRouter)
 app.use(mainPageRouter)
 

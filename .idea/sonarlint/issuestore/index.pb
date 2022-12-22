@@ -16,8 +16,6 @@ L
 dist/types/IUserModel.js.map,4\a\4a83a4a261fab78abd2b2c6374a5ebf058309616
 J
 dist/types/IAccount.js.map,4\7\47dd38a2088a6c3c01c63eca80108ff843ba37e9
-B
-dist/DB_URI.js.map,0\0\0088b4741d42c464db4998f2380ac12c2ff14296
 K
 dist/src/models/User.js.map,b\9\b9eb5c90039866f4f48e24802930aafe87910bcb
 A
@@ -36,18 +34,12 @@ C
 dist/src/app.js.map,1\1\11d173d984252815c64283ff8bce7453e753fc15
 O
 dist/interfaces/IAccount.js.map,1\5\15c752afa2b2772e6595534943080d705f1ae01c
-F
-dist/uri/DB_URI.js.map,8\2\82e94702093f826c92c618d810c768040320d098
 ?
 dist/src/app.js,8\7\87aef6da5d59d8ff4bec64eb5885ae39ee79f0a9
 V
 &dist/src/controllers/authController.js,d\3\d3c9ca96acb62e6f477719fe39f23fa5b9d1e751
 M
 dist/src/routes/authRoutes.js,4\f\4f51558dcfbd0d28f8868b729857c0764dfaafc0
-B
-dist/uri/DB_URI.js,d\f\dfd184e5c51a94638c9b945ffa338f6da69ba056
->
-dist/DB_URI.js,8\e\8ef55de1dfb3b145810db391d911b47ac5226f51
 I
 views/partials/footer.ejs,1\2\12e5eb8376bd53293e479165861eabbff9b3d746
 K
@@ -62,8 +54,6 @@ G
 dist/src/types/IUser.js,2\8\284b89a4264850fbc940e414dbacab087cbc125a
 C
 dist/types/IUser.js,b\3\b3353f4a62fccee5d76a3168f2197b2350d411bc
-=
-dist/IUser.js,c\1\c19711678b9b50b92586de65022f5e3263124f42
 H
 dist/types/IUserModel.js,7\e\7e4a49bdfd04420fd4da522023dc7d676f62f92d
 K
@@ -78,24 +68,14 @@ V
 &dist/controllers/mainPageController.js,3\3\331522c5ba9ca6dd441b22b1997f43aa97964d9c
 =
 tsconfig.json,6\1\61ebb9fd6e8cf9082658121d5d81e297791dacd0
-A
-package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
-<
-package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
 4
 .env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
-?
-dist/app.js.map,e\b\eb03f34d0d80a381b70369ea76e9b9b06a5d3ad8
 Q
 !dist/routes/mainPageRoutes.js.map,1\e\1e41be8899b316bacc02e86d6a83f66e87cbd1d7
 G
 dist/models/User.js.map,f\9\f9a5a18b3e979b66ddca1e1d2906640e42b5704e
-;
-dist/app.js,e\d\ed8e06061e7f626da58b05d1c243d4c2c7193f56
 >
 views/home.ejs,0\c\0c0963ebc7f1e502b8d91b4f9bd9d82b7b16e719
-B
-src/types/IUser.ts,a\0\a0dbd2fca1c3cc0e1adb146e207723270a24953e
 J
 src/types/IUserDocument.ts,0\1\0158090a211a58ba53157e2281f4a9800c942745
 G
@@ -106,11 +86,5 @@ M
 views/signup.ejs,f\b\fbc9cc99a27e840a54a071b85665c235786d8f70
 C
 dist/models/User.js,1\e\1e5a7d308a941cd6a9d5a4e5a569b99c2097253b
-L
-src/routes/mainPageRoutes.ts,f\4\f4840bf94d86da8e791924323249e89eda518d03
-P
- src/middleware/authMiddleware.ts,8\e\8e89ef6143eb5f1ef9eb44b1835f8d57597e4488
-B
-src/models/User.ts,e\9\e9bf216a20e84ee797b9402193000e41dad21aa6
 ?
 views/login.ejs,3\f\3f748e7b3e38d474ff6964f6a6d3381932b1eac9
