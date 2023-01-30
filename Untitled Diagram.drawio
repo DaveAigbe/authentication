@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-30T02:41:29.354Z" agent="5.0 (Windows)" etag="DsRg6ZzRgqOD0tNYO94Y" version="20.8.13" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-30T02:55:21.681Z" agent="5.0 (Windows)" etag="bmk7wwgSmmkAY3MK7CFI" version="20.8.13" type="github">
   <diagram name="Page-1" id="mB1oXrX7iGT4szolYkop">
     <mxGraphModel dx="898" dy="1104" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -35,6 +35,23 @@
             <mxPoint y="-55" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="9gGxuryh9IrbsHXoPqdI-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.864;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=11;" edge="1" parent="1" source="9gGxuryh9IrbsHXoPqdI-3" target="9gGxuryh9IrbsHXoPqdI-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGxuryh9IrbsHXoPqdI-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.39;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=11;" edge="1" parent="1" source="9gGxuryh9IrbsHXoPqdI-3" target="9gGxuryh9IrbsHXoPqdI-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="535" y="700" />
+              <mxPoint x="790" y="700" />
+              <mxPoint x="790" y="409" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9gGxuryh9IrbsHXoPqdI-30" value="&lt;div&gt;AccessT &amp;amp; RefreshT expired,&lt;/div&gt;&lt;div&gt;user credentials &lt;br&gt;&lt;/div&gt;&lt;div&gt;must be re-entered&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="9gGxuryh9IrbsHXoPqdI-29">
+          <mxGeometry x="0.3279" y="-1" relative="1" as="geometry">
+            <mxPoint x="9" y="64" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="9gGxuryh9IrbsHXoPqdI-3" value="Resources API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="315" y="580" width="220" height="100" as="geometry" />
         </mxCell>
@@ -68,6 +85,11 @@
         </mxCell>
         <mxCell id="9gGxuryh9IrbsHXoPqdI-13" value="&lt;div style=&quot;font-size: 18px;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Username&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 18px;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Password&lt;/font&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;" vertex="1" parent="1">
           <mxGeometry x="335" y="290" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9gGxuryh9IrbsHXoPqdI-28" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;AccessT expired,&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;Match with RefreshT&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;then give new AcessT&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="710" y="560" as="geometry">
+            <mxPoint x="2" y="-4" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
